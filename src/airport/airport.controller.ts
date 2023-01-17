@@ -17,7 +17,7 @@ export class AirportController {
   }
 
   @Get(':id')
-  findOne(@Param('id')id:number ) {
+  findOne(@Body('id')id ) {
     return this.airportService.findOne(id);
   }
 

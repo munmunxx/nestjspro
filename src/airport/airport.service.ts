@@ -19,7 +19,7 @@ constructor( @InjectRepository(Airports) private airportRepository: Repository<A
     return this.airportRepository.find() ;
   }
 
-  findOne(id:number): Promise<Airports> {
+  findOne(id): Promise<Airports> {
     return this.airportRepository.findOneBy({id});
           
     
