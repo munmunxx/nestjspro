@@ -1,11 +1,11 @@
 export class CreateAirportDto {
 id:number;
    
-    code: number;
+code: number;
    
-    name: string;
+name: string;
    
-    cityCode: string;
+cityCode: string;
    
 cityName:string;
    
@@ -13,7 +13,7 @@ countryName: string;
    
 countryCode:string;
    
-	timezone:string;
+timezone:string;
    
 lat:string;
    
@@ -21,9 +21,6 @@ lon:string;
    
 numofairport:number;
 
-
-
 city:boolean;
-
 
 }

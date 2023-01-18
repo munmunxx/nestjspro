@@ -12,23 +12,23 @@ export class Airports {
     @Column()
     cityCode: string;
     @Column()
-cityName:string;
+    cityName:string;
     @Column()
-countryName: string;
+    countryName: string;
     @Column()
-countryCode:string;
+    countryCode:string;
     @Column()
 	timezone:string;
     @Column()
-lat:string;
+    lat:string;
     @Column()
-lon:string;
+    lon:string;
     @Column()
-numofairport:number;
+    numofairport:number;
 
-@Column()
+    @Column()
 
-city:boolean;
+   city:boolean;
 
 
 }

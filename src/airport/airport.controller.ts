@@ -3,10 +3,11 @@ import { AirportService } from './airport.service';
 import { CreateAirportDto } from './dto/create-airport.dto';
 import { UpdateAirportDto } from './dto/update-airport.dto';
 
-@Controller('airport')
+@Controller( ) // ('airport')
+  
 export class AirportController {
   constructor(private readonly airportService: AirportService) {}
-
+  
   @Post()
   create(@Body() createAirportDto: CreateAirportDto) {
     return this.airportService.create(createAirportDto);
@@ -14,20 +15,21 @@ export class AirportController {
   @Get('all')
   findAll() {
     return this.airportService.findAll();
+ 
   }
-
   @Get(':id')
-  findOne(@Body('id')id ) {
+  findOne(@Param('id') id: number) {
     return this.airportService.findOne(id);
   }
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateAirportDto: UpdateAirportDto) {
-    return this.airportService.update(+id, updateAirportDto);
+    return this.airportService.update(+id
+      ,updateAirportDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.airportService.remove(+id);
+  remove(@Param('id') id: number) {
+    return this.airportService.remove(id);
   }
 }
