@@ -3,7 +3,7 @@ import { AirportService } from './airport.service';
 import { CreateAirportDto } from './dto/create-airport.dto';
 import { UpdateAirportDto } from './dto/update-airport.dto';
 
-@Controller( ) // ('airport')
+@Controller( 'airport') // ('airport')
   
 export class AirportController {
   constructor(private readonly airportService: AirportService) {}
@@ -21,7 +21,7 @@ export class AirportController {
   findOne(@Param('id') id: number) {
     return this.airportService.findOne(id);
   }
-
+ 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateAirportDto: UpdateAirportDto) {
     return this.airportService.update(+id

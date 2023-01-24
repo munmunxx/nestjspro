@@ -6,7 +6,8 @@ import { UpdateAirportDto } from './dto/update-airport.dto';
 import { Airports } from './entities/airport.entity';
 
 @Injectable()
-export class AirportService {constructor( @InjectRepository(Airports) private airportRepository: Repository<Airports>) {}
+export class AirportService 
+{constructor( @InjectRepository(Airports) private airportRepository: Repository<Airports>) {}
 
   create(createAirportDto: CreateAirportDto) {
     return 'This action adds a new airport';
@@ -28,9 +29,7 @@ export class AirportService {constructor( @InjectRepository(Airports) private ai
     upddateair.cityCode =updateAirportDto.cityCode
 
     const newupdateair = await this.airportRepository.save(upddateair)
-    return newupdateair;
-
-  ;
+    return newupdateair;  ;
   }
 
   remove(id: number) {
