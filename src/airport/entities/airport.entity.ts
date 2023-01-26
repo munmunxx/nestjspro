@@ -6,7 +6,7 @@ export class Airports {
     @PrimaryGeneratedColumn()
     id:number;
     @Column()
-    code: number;
+    code:number;
     @Column()
     name: string;
     @Column()
